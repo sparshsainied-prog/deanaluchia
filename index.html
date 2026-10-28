@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Deana Luchia | Is There Anybody Out There?</title>
+<meta name="description" content="Deana Luchia writes uplit with at least one dog in every story. Is There Anybody Out There?, Happy As Harry, The Year Of The Dog, God &amp; Dallas, and her writing workshops.">
+<meta property="og:title" content="A homepage for Deana Luchia, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for Deana Luchia and Is There Anybody Out There?, made by Sparsh Saini. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/deanaluchia/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23123048'/><path d='M16 4l2.4 9.6L28 16l-9.6 2.4L16 28l-2.4-9.6L4 16l9.6-2.4z' fill='%23f6e43c'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/sky.jpg">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* From the Is There Anybody Out There? cover: night-sky teal and navy, star white, the title's yellow,
+   the planets' orange, the girl's pink hair, the roof's tile blue. Quicksand is the cover's rounded
+   geometric capitals; Lora reads beside it. */
+:root {
+  --night: #123048;
+  --night-2: #0d2234;
+  --sky: #1c4a66;
+  --yellow: #f6e43c;
+  --orange: #e2763a;
+  --pink: #f0458f;
+  --tile: #4a86c8;
+  --tile-2: #2f63a3;
+  --star: #fdf8e4;
+  --ink: #1d2733;
+  --paper: #f7f4ec;
+  --display: "Quicksand", "Avenir Next", sans-serif;
+  --text: "Lora", Georgia, serif;
+  --gut: clamp(1rem, 5vw, 4rem);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--night); color: var(--star); font-family: var(--text); font-size: 1.12rem; line-height: 1.6; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; margin: 0; }
+
+.strip { position: relative; z-index: 30; background: var(--yellow); color: var(--ink); font-family: var(--display); font-weight: 600; font-size: .92rem; text-align: center; padding: .45rem var(--gut); }
+
+/* ---------- nav: a speech bubble, as on her posts ("Come and say hello!") ---------- */
+.hello { position: fixed; z-index: 40; left: 12px; bottom: 14px; background: var(--paper); color: var(--ink); border: 0; border-radius: 22px; padding: .55rem 1rem .5rem; font-family: var(--display); font-weight: 700; font-size: .98rem; cursor: pointer; box-shadow: 0 4px 0 var(--pink); }
+.hello::after { content: ""; position: absolute; left: 18px; bottom: -9px; border: 6px solid transparent; border-top: 8px solid var(--paper); }
+.chat { position: fixed; z-index: 50; inset: 0; background: rgba(13, 34, 52, .7); display: none; }
+.chat.open { display: block; }
+.chat ol { position: absolute; left: 12px; bottom: 66px; list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; justify-items: start; }
+.chat a { display: inline-block; background: var(--paper); color: var(--ink); border-radius: 18px; padding: .45rem .95rem; font-family: var(--display); font-weight: 600; text-decoration: none; }
+.chat a:hover { background: var(--yellow); }
+
+/* ---------- the turning sky ---------- */
+.hero { position: relative; height: 380vh; }
+.stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--night); }
+.cover { position: absolute; container-type: inline-size; left: 50%; top: 0; transform: translateX(-50%); width: min(100vw, calc((100svh - 150px) * .7385)); aspect-ratio: 960 / 1300; overflow: hidden; }
+.pl { position: absolute; will-change: transform, opacity; max-width: none; }
+.sky { left: -22.917%; top: -16.923%; width: 145.833%; transform-origin: 50% -40%; }
+.planets { left: 0; top: 0; width: 100%; transform-origin: 50% -60%; }
+.house { left: 0; top: 54.77%; width: 100%; }
+.star { width: 9%; left: 79%; top: 6%; opacity: 0; }
+.ttl { position: absolute; inset: 0; pointer-events: none; text-align: center; }
+.ttl h1 { position: absolute; left: 0; right: 0; top: 2.6%; font-size: 15.2cqw; line-height: 1.02; letter-spacing: .04em; color: var(--yellow); font-weight: 500; }
+.q { position: absolute; top: 52%; width: 27%; font-family: var(--display); font-weight: 600; text-align: center; line-height: 1.2; }
+.q i { display: block; color: var(--yellow); font-style: italic; font-size: 3.2cqw; font-weight: 500; }
+.q b { display: block; color: #fff; font-size: 2.9cqw; letter-spacing: .06em; margin-top: .4em; font-weight: 600; }
+.q.l { left: 9%; } .q.r { right: 6%; }
+.by { position: absolute; left: 0; right: 0; top: 90%; text-align: center; font-family: var(--display); font-weight: 600; color: #fff; font-size: 7.4cqw; letter-spacing: .12em; text-shadow: 0 2px 0 var(--tile-2); }
+.cap { position: absolute; left: var(--gut); right: var(--gut); top: calc(min(100vw, (100svh - 150px) * .7385) * 1.354 + 14px); }
+.cap p { margin: 0; font-size: 1.05rem; line-height: 1.45; opacity: 0; will-change: opacity; }
+.cap p.c1 { opacity: 1; }
+.cap p.c2 { position: absolute; left: 0; right: 0; top: 0; pointer-events: none; }
+.cap p.c2.live { pointer-events: auto; }
+.cap b { font-family: var(--display); color: var(--yellow); }
+.btn { display: inline-block; margin-top: .6rem; font-family: var(--display); font-weight: 700; font-size: .98rem; text-decoration: none; background: var(--yellow); color: var(--ink); border-radius: 999px; padding: .5rem 1.1rem; box-shadow: 0 3px 0 var(--orange); }
+.btn:hover { background: #fff; }
+.btn.ghost { background: none; color: var(--star); box-shadow: inset 0 0 0 2px var(--star); }
+@media (min-width: 900px) {
+  .cover { left: auto; right: 7vw; transform: none; width: calc(100svh * .7385); }
+  .cap { left: var(--gut); right: auto; top: 50%; width: min(26rem, 32vw); transform: translateY(-50%); }
+  .cap p { font-size: 1.3rem; }
+}
+
+/* ---------- sections ---------- */
+section.newbook, section.pack, section.back, section.write, section.fair { padding: clamp(3.5rem, 9vw, 6.5rem) var(--gut); }
+.newbook h2, .pack h2, .back h2, .write h2, .fair h2 { font-size: clamp(2rem, 7vw, 3.4rem); }
+.lede { max-width: 40rem; margin: .8rem 0 0; font-size: 1.2rem; }
+
+.newbook { background: var(--sky); display: grid; gap: 2rem; }
+@media (min-width: 900px) { .newbook { grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; } }
+.newbook img { border-radius: 6px; box-shadow: 0 12px 0 var(--night-2); }
+.newbook h2 { color: var(--yellow); }
+.newbook .note { font-family: var(--display); font-weight: 600; color: var(--yellow); margin-top: 1rem; }
+
+.pack { background: var(--paper); color: var(--ink); }
+.pack .dogs { display: grid; gap: 1rem; margin-top: 1.8rem; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); max-width: 56rem; }
+.pack .dog { background: #fff; border-radius: 18px; padding: 1rem 1.1rem; box-shadow: 0 4px 0 var(--tile); }
+.pack .dog b { font-family: var(--display); font-size: 1.35rem; display: block; }
+.pack .dog span { font-size: .98rem; }
+
+.back { background: var(--night-2); }
+.shelf { display: grid; gap: 2.4rem; margin-top: 2.2rem; }
+@media (min-width: 900px) { .shelf { grid-template-columns: repeat(3, 1fr); } }
+.bk { display: grid; grid-template-columns: 34% 1fr; gap: 1.1rem; align-items: start; }
+@media (min-width: 900px) { .bk { grid-template-columns: 1fr; } .bk img { width: 62%; } }
+.bk img { border-radius: 4px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }
+.bk h3 { font-size: 1.4rem; color: var(--yellow); }
+.bk p { margin: .45rem 0 0; font-size: 1rem; }
+
+.write { background: var(--tile-2); }
+.write ul { margin: 1.4rem 0 0; padding: 0; list-style: none; max-width: 42rem; }
+.write li { padding: .7rem 0; border-top: 2px dotted rgba(253,248,228,.4); }
+.write li b { font-family: var(--display); display: block; font-size: 1.2rem; }
+
+.fair { background: var(--night); text-align: center; }
+.fair .bubble { display: inline-block; background: var(--paper); color: var(--ink); border-radius: 28px; padding: 1rem 1.6rem; font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 6vw, 2.6rem); position: relative; margin: 1.2rem 0 .6rem; box-shadow: 0 5px 0 var(--pink); }
+.fair .bubble::after { content: ""; position: absolute; left: 30px; bottom: -14px; border: 9px solid transparent; border-top: 13px solid var(--paper); }
+.fair .t { font-family: var(--display); font-weight: 700; color: var(--yellow); font-size: clamp(3rem, 12vw, 5.5rem); line-height: 1; margin-top: 1rem; }
+.fair p { max-width: 34rem; margin: .4rem auto; }
+.fair .links { margin-top: 1.4rem; font-size: 1rem; }
+.fair .links a { margin: 0 .5rem; }
+footer { background: var(--night); color: #9fb3c2; text-align: center; font-size: .9rem; padding: 1rem var(--gut) 5rem; border-top: 1px solid rgba(253,248,228,.12); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero { height: auto; }
+  .stage { position: relative; height: 100svh; }
+}
+</style>
+</head>
+<body>
+<div class="strip">A homepage idea made by Sparsh Saini for Deana Luchia. Not their official site.</div>
+<button class="hello" aria-expanded="false" aria-controls="chat">Say hello</button>
+<div class="chat" id="chat">
+  <ol aria-label="Sections">
+    <li><a href="#top">Is there anybody out there?</a></li>
+    <li><a href="#new">The new book</a></li>
+    <li><a href="#pack">The dogs</a></li>
+    <li><a href="#back">More books</a></li>
+    <li><a href="#write">Workshops and support</a></li>
+    <li><a href="#fair">Oxford, 22 November</a></li>
+  </ol>
+</div>
+
+<main>
+<section class="hero" id="top" aria-label="Is There Anybody Out There?">
+  <div class="stage">
+    <div class="cover">
+      <img class="pl sky" src="img/sky.jpg" alt="" width="1400" height="1520">
+      <img class="pl planets" src="img/planets.webp" alt="" width="960" height="700">
+      <img class="pl star" src="img/star.webp" alt="" width="120" height="120">
+      <img class="pl house" src="img/house.webp" alt="The cover of Is There Anybody Out There?: a girl and her dog sitting on a roof under the stars and planets" width="960" height="588">
+      <div class="ttl">
+        <h1>IS THERE<br>ANYBODY<br>OUT<br>THERE?</h1>
+        <div class="q l"><i>"Funny and moving."</i><b>NILOUFAR LAMAKAN</b></div>
+        <div class="q r"><i>"Quirkily heartwarming."</i><b>RAQUEL CASSIDY</b></div>
+        <div class="by">DEANA LUCHIA</div>
+      </div>
+    </div>
+    <div class="cap">
+      <p class="c1"><b>A new novel</b> about how tricky it can be, as adults, to make friends.</p>
+      <p class="c2">And how important it is to keep trying until you find your tribe. You will find them.<br><a class="btn" href="https://www.amazon.co.uk/s?k=Is+There+Anybody+Out+There+Deana+Luchia">Find the ebook on Amazon</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="newbook" id="new">
+  <img src="img/anybody.jpg" alt="Is There Anybody Out There? by Deana Luchia" width="640" height="637" loading="lazy">
+  <div>
+    <h2>Is There Anybody Out There?</h2>
+    <p class="lede">Uplit, with aliens. Deana's new novel is about why we should all talk to strangers: how tricky it can be to make friends as an adult, and why it's worth going on looking until you find your people.</p>
+    <p class="note">Out now as an ebook. Paperback to follow.</p>
+    <a class="btn" href="https://www.amazon.co.uk/s?k=Is+There+Anybody+Out+There+Deana+Luchia">Find it on Amazon</a>
+  </div>
+</section>
+
+<section class="pack" id="pack">
+  <h2>There's always a dog</h2>
+  <p class="lede">Every story Deana writes has at least one dog in it: Great Danes, Chihuahuas, Border Terriers and mixed breeds, cavorting across the chapters and bringing comfort and laughter to characters struggling to make sense of the world.</p>
+  <div class="dogs">
+    <div class="dog"><b>Dottie</b><span>Hears every story first.</span></div>
+    <div class="dog"><b>Pippa</b><span>Hears every story first, too.</span></div>
+    <div class="dog"><b>Harry</b><span>The much-missed rescue dog who narrates Happy As Harry.</span></div>
+    <div class="dog"><b>Alfredo</b><span>Her first dog, the day she went freelance.</span></div>
+  </div>
+</section>
+
+<section class="back" id="back">
+  <h2>More from Deana</h2>
+  <div class="shelf">
+    <article class="bk"><img src="img/harry.jpg" alt="Happy As Harry cover" width="480" height="743" loading="lazy"><div><h3>Happy As Harry</h3><p>A kind, warm and funny guide to making the most out of life, narrated by a little rescue dog determined to find happiness in everything. Also in French.</p><a class="btn ghost" href="https://www.amazon.co.uk/Happy-Harry-rescue-secrets-happiness-ebook/dp/B072VQPDKL">Amazon</a></div></article>
+    <article class="bk"><img src="img/yearofthedog.jpg" alt="The Year Of The Dog cover" width="480" height="722" loading="lazy"><div><h3>The Year Of The Dog</h3><p>365 fun activities to do with your dog, from yoga to waltzing, cinema trips to canoeing. A thank-you to beloved dogs everywhere.</p><a class="btn ghost" href="https://www.waterstones.com/book/the-year-of-the-dog/deana-luchia/9781846894282">Waterstones</a></div></article>
+    <article class="bk"><img src="img/goddallas.jpg" alt="God and Dallas cover" width="480" height="720" loading="lazy"><div><h3>God &amp; Dallas</h3><p>Aware she is dying, Ginger has two obsessions: God and the TV show Dallas. A heartfelt, funny novel about mothers, daughters and the importance of friends.</p><a class="btn ghost" href="https://www.amazon.co.uk/God-Dallas-Deana-Luchia-ebook/dp/B009SRRA2C">Amazon</a></div></article>
+  </div>
+  <p style="margin-top:2rem"><a href="https://www.amazon.co.uk/Deana-Luchia-Sessions-Exclusive-Interview/dp/B077GC1SGB/">Listen to Deana and Harry on Audible Sessions</a></p>
+</section>
+
+<section class="write" id="write">
+  <h2>For writers</h2>
+  <p class="lede">Deana is a journalist and a creative writing teacher with an MA in Professional Writing, and she supports authors around the world.</p>
+  <ul>
+    <li><b>Creative writing workshops</b>Hundreds taught so far.</li>
+    <li><b>Author support services</b>Editing and help getting a book out, for writers anywhere.</li>
+    <li><b>Coming soon</b>Write To The End, a book of daily writing prompts, and DJ Dad, a comic novel for pre-teens.</li>
+  </ul>
+  <a class="btn" href="https://www.deanaluchia.com/contact">Get in touch</a>
+</section>
+
+<section class="fair" id="fair">
+  <div class="bubble">Come and say hello!</div>
+  <p style="margin-top:1rem">Oxford Indie Book Fair, Sunday 22 November, 11am to 4.30pm, Examination Schools, High Street.</p>
+  <div class="t">Table S46</div>
+  <p class="links"><a href="https://www.instagram.com/deanaluchia/">Instagram</a><a href="https://www.deanaluchia.com/articles">Articles</a><a href="https://www.deanaluchia.com/contact">Contact</a></p>
+</section>
+</main>
+<footer>A mockup made by Sparsh Saini for Deana Luchia. Not affiliated, not live.</footer>
+
+<script>
+(() => {
+  const btn = document.querySelector('.hello'), chat = document.getElementById('chat');
+  const setOpen = o => { chat.classList.toggle('open', o); btn.setAttribute('aria-expanded', o); if (o) chat.querySelector('a').focus(); };
+  btn.addEventListener('click', () => setOpen(!chat.classList.contains('open')));
+  chat.addEventListener('click', e => { if (e.target === chat || e.target.closest('a')) setOpen(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+
+  // the night turns: the whole sky wheels round a point high above the roof, the planets a little
+  // faster (they are nearer), while the girl and her dog sit still; when it settles, one star answers
+  const hero = document.querySelector('.hero');
+  const sky = hero.querySelector('.sky'), planets = hero.querySelector('.planets'), star = hero.querySelector('.star');
+  const c1 = hero.querySelector('.c1'), c2 = hero.querySelector('.c2');
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  let ticking = false;
+  function frame() {
+    ticking = false;
+    let p;
+    if (still.matches) p = 1;
+    else { const r = hero.getBoundingClientRect(); p = clamp(-r.top / (hero.offsetHeight - innerHeight)); }
+    const t = ease(clamp(p / .78));
+    const a = -16 * (1 - t);
+    sky.style.transform = `rotate(${a.toFixed(3)}deg)`;
+    planets.style.transform = `rotate(${(a * 1.45).toFixed(3)}deg)`;
+    planets.style.opacity = clamp(.35 + t * .9).toFixed(3);
+    const s = clamp((p - .8) / .12);
+    const pulse = s * (0.6 + 0.4 * Math.sin(clamp((p - .8) / .2) * Math.PI * 3));
+    star.style.opacity = pulse.toFixed(3);
+    star.style.transform = `scale(${(0.6 + s * .6).toFixed(3)}) rotate(${(s * 45).toFixed(1)}deg)`;
+    const k = clamp((p - .82) / .1);
+    c1.style.opacity = (1 - k).toFixed(3);
+    c2.style.opacity = k.toFixed(3);
+    c2.classList.toggle('live', k > .5);
+  }
+  const go = () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+  addEventListener('scroll', go, { passive: true });
+  addEventListener('resize', go);
+  still.addEventListener('change', go);
+  frame();
+})();
+</script>
+</body>
+</html>
